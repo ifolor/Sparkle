@@ -203,6 +203,22 @@
 			return nil;
 		}
 		
+		// MK>>>> Mangle the URL depending on the location/delivery country of the installation
+		if (enclosureURLString) {
+			NSString *downloadHostMapping = [[NSUserDefaults standardUserDefaults] objectForKey:@"IfoUpdateDownloadURLMapping"];
+			NSLog(@"Sparkle: IfoUpdateDownloadURLMapping: %@", downloadHostMapping);
+			if (downloadHostMapping) {
+				NSArray *parts = [downloadHostMapping componentsSeparatedByString:@"->"];
+				if (parts.count == 2) {
+					NSString *convertFrom = [parts objectAtIndex:0];
+					NSString *convertTo   = [parts objectAtIndex:1];
+					enclosureURLString = [enclosureURLString stringByReplacingOccurrencesOfString:convertFrom withString:convertTo];
+					NSLog(@"Sparkle: Download URL set to %@", enclosureURLString);
+				}
+			}
+		}
+		// MK<<<<
+	
 		if( enclosureURLString )
 			[self setFileURL: [NSURL URLWithString: [enclosureURLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
 		if( enclosure )
