@@ -185,6 +185,12 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		3772FEA813DE0B6B00F79537 /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
+		4DAAF3ED15760927004FA918 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Sparkle.strings; sourceTree = "<group>"; };
+		4DAAF3EF157609A2004FA918 /* nb */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Sparkle.strings; sourceTree = "<group>"; };
+		4DAAF3F0157609FE004FA918 /* fi */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fi; path = fi.lproj/SUUpdatePermissionPrompt.xib; sourceTree = "<group>"; };
+		4DAAF3F115760A7C004FA918 /* nb */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nb; path = nb.lproj/SUUpdatePermissionPrompt.xib; sourceTree = "<group>"; };
+		4DAAF3F215760AB8004FA918 /* fi */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fi; path = fi.lproj/SUUpdateAlert.xib; sourceTree = "<group>"; };
+		4DAAF3F315760B87004FA918 /* nb */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nb; path = nb.lproj/SUUpdateAlert.xib; sourceTree = "<group>"; };
 		525A278F133D6AE900FD8D70 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		550347001370023A00AE7681 /* Sparkle.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Sparkle.icns; sourceTree = "<group>"; };
 		55C14BB7136EEF1500649790 /* finish_installation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finish_installation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -924,6 +930,7 @@
 				ro,
 				sl,
 				uk,
+				nb,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* Sparkle */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -1215,6 +1222,8 @@
 				61DEC11A1477567800931268 /* ro */,
 				61BA66DB14BDFC5500D02D86 /* sl */,
 				0263187614FEBB42005EBF43 /* uk */,
+				4DAAF3F215760AB8004FA918 /* fi */,
+				4DAAF3F315760B87004FA918 /* nb */,
 			);
 			name = SUUpdateAlert.xib;
 			sourceTree = "<group>";
@@ -1245,6 +1254,8 @@
 				61DEC1181477566800931268 /* ro */,
 				61BA66DC14BDFC5500D02D86 /* sl */,
 				0263187714FEBB42005EBF43 /* uk */,
+				4DAAF3F0157609FE004FA918 /* fi */,
+				4DAAF3F115760A7C004FA918 /* nb */,
 			);
 			name = SUUpdatePermissionPrompt.xib;
 			sourceTree = "<group>";
@@ -1273,6 +1284,8 @@
 				61DEC1161477565C00931268 /* ro */,
 				61BA66CC14BDFA0400D02D86 /* sl */,
 				0263187214FEBB31005EBF43 /* uk */,
+				4DAAF3ED15760927004FA918 /* fi */,
+				4DAAF3EF157609A2004FA918 /* nb */,
 			);
 			name = Sparkle.strings;
 			sourceTree = "<group>";

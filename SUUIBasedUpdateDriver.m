@@ -37,6 +37,11 @@
 		[[updateAlert window] setHidesOnDeactivate:NO];
 		[NSApp activateIgnoringOtherApps:YES];
 	}
+
+	// MK>>>> The update window should be modal
+	[NSApp runModalForWindow:[updateAlert window]];
+	return;
+	// MK<<<<
 	
 	// Only show the update alert if the app is active; otherwise, we'll wait until it is.
 	if ([NSApp isActive])
@@ -63,6 +68,10 @@
 
 - (void)updateAlert:(SUUpdateAlert *)alert finishedWithChoice:(SUUpdateAlertChoice)choice
 {
+	// MK>>>> The update window should be modal
+	[NSApp stopModal];
+	// MK<<<<
+	
 	[updateAlert release]; updateAlert = nil;
 	[host setObject:nil forUserDefaultsKey:SUSkippedVersionKey];
 	switch (choice)
