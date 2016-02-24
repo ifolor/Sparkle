@@ -170,6 +170,19 @@
     return self.host.allowsAutomaticUpdates;
 }
 
+// MK>>>> Hide some controls, change window properties
+- (void)awakeFromNib
+{
+    self.window.styleMask = NSTitledWindowMask | NSResizableWindowMask;
+    self.automaticallyInstallUpdatesButton.hidden = YES;
+    self.skipButton.hidden = YES;
+    self.laterButton.hidden = YES;
+    NSLayoutConstraint *installButtonToReleaseNotesContainerConstraint = [NSLayoutConstraint constraintWithItem:self.installButton
+                                                                                                      attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.releaseNotesContainerView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:12.0];
+    [self.window.contentView addConstraint:installButtonToReleaseNotesContainerConstraint];
+}
+// MK<<<<
+
 - (void)windowDidLoad
 {
     BOOL showReleaseNotes = [self showsReleaseNotes];

@@ -79,11 +79,18 @@
         [NSApp activateIgnoringOtherApps:YES];
     }
 
+    // MK>>>> The update window should be modal
+    NSWindow *window = [self.updateAlert window];
+    [NSApp runModalForWindow:window];
+    return;
+    // MK<<<<
+    /*
     // Only show the update alert if the app is active; otherwise, we'll wait until it is.
     if ([NSApp isActive])
         [[self.updateAlert window] makeKeyAndOrderFront:self];
     else
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
+     */
 }
 
 - (void)didNotFindUpdate
@@ -110,6 +117,10 @@
 
 - (void)updateAlertFinishedWithChoice:(SUUpdateAlertChoice)choice
 {
+    // MK>>>> The update window should be modal
+    [NSApp stopModal];
+    // MK<<<<
+    
     self.updateAlert = nil;
     [self.host setObject:nil forUserDefaultsKey:SUSkippedVersionKey];
     switch (choice) {

@@ -133,6 +133,23 @@
             return nil;
         }
 
+        // MK>>>> Mangle the URL depending on the location/delivery country of the installation
+        if (enclosureURLString) {
+            NSLog(@"Sparkle⚗: enclosure: %@", enclosure);
+            NSString *downloadHostMapping = [[NSUserDefaults standardUserDefaults] objectForKey:@"IfoUpdateDownloadURLMapping"];
+            if (downloadHostMapping) {
+                NSLog(@"Sparkle⚗: IfoUpdateDownloadURLMapping: %@", downloadHostMapping);
+                NSArray *parts = [downloadHostMapping componentsSeparatedByString:@"->"];
+                if (parts.count == 2) {
+                    NSString *convertFrom = parts[0];
+                    NSString *convertTo   = parts[1];
+                    enclosureURLString = [enclosureURLString stringByReplacingOccurrencesOfString:convertFrom withString:convertTo];
+                    NSLog(@"Sparkle⚗: Download URL set to %@", enclosureURLString);
+                }
+            }
+        }
+        // MK<<<<
+        
         if (enclosureURLString) {
             // Sparkle used to always URL-encode, so for backwards compatibility spaces in URLs must be forgiven.
             NSString *fileURLString = [enclosureURLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
@@ -141,6 +158,13 @@
         if (enclosure) {
             self.DSASignature = enclosure[SUAppcastAttributeDSASignature];
         }
+        
+        // MK>>>>
+        // Hockey does not provide a dsaSignature in the RSS feed, so we have to short-circuit the DSA check here
+        if (self.DSASignature == nil && [enclosureURLString rangeOfString:@"rink.hockeyapp.net"].location != NSNotFound) {
+            self.DSASignature = @"HockeyAppHasNoDSASignature";
+        }
+        // MK<<<<
 
         self.versionString = newVersion;
         self.minimumSystemVersion = dict[SUAppcastElementMinimumSystemVersion];

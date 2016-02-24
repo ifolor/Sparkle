@@ -31,6 +31,14 @@
         return NO;
     }
 
+    // MK>>>>
+    // Hockey does not provide a dsaSignature in the RSS feed, so we have to short-circuit the DSA check here
+    if ([encodedSignature isEqualToString:@"HockeyAppHasNoDSASignature"]) {
+        SULog(@"There is no DSA signature in a Hockey build, omit the DSA check.");
+        return YES;
+    }
+    // MK<<<<
+    
     SUDSAVerifier *verifier = [[self alloc] initWithPublicKeyData:[pkeyString dataUsingEncoding:NSUTF8StringEncoding]];
 
     if (!verifier) {

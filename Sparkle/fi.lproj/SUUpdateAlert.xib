@@ -23,15 +23,15 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window identifier="SUUpdateAlert" title="Programuppdatering" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SUUpdateAlert" animationBehavior="default" id="5" userLabel="Update Alert (release notes)">
+        <window identifier="SUUpdateAlert" title="Software Update" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SUUpdateAlert" animationBehavior="default" id="5" userLabel="Update Alert (release notes)">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="746" y="229" width="644" height="370"/>
+            <rect key="contentRect" x="746" y="229" width="620" height="370"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="550" height="150"/>
             <value key="maxSize" type="size" width="700" height="600"/>
             <view key="contentView" id="6">
-                <rect key="frame" x="0.0" y="0.0" width="644" height="370"/>
+                <rect key="frame" x="0.0" y="0.0" width="620" height="370"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView translatesAutoresizingMaskIntoConstraints="NO" id="7" userLabel="Program icon">
@@ -47,7 +47,7 @@
                         </connections>
                     </imageView>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="10" userLabel="Version text field">
-                        <rect key="frame" x="106" y="338" width="518" height="17"/>
+                        <rect key="frame" x="106" y="338" width="494" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="777" constant="17" id="n8w-DR-XEM"/>
                         </constraints>
@@ -60,8 +60,8 @@
                             <binding destination="-2" name="value" keyPath="titleText" id="11"/>
                         </connections>
                     </textField>
-                    <textField horizontalHuggingPriority="350" verticalHuggingPriority="999" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="1000" preferredMaxLayoutWidth="514" translatesAutoresizingMaskIntoConstraints="NO" id="101" userLabel="Question text field">
-                        <rect key="frame" x="106" y="316" width="518" height="14"/>
+                    <textField horizontalHuggingPriority="350" verticalHuggingPriority="999" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="1000" preferredMaxLayoutWidth="490" translatesAutoresizingMaskIntoConstraints="NO" id="101" userLabel="Question text field">
+                        <rect key="frame" x="106" y="316" width="494" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" priority="300" constant="28" id="H6E-te-Fog"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="KUO-Dw-g6s"/>
@@ -76,16 +76,16 @@
                         </connections>
                     </textField>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="fKC-QA-GZa" userLabel="Container to hide release notes">
-                        <rect key="frame" x="108" y="74" width="516" height="234"/>
+                        <rect key="frame" x="108" y="74" width="492" height="234"/>
                         <subviews>
                             <box boxType="oldStyle" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="89">
-                                <rect key="frame" x="0.0" y="0.0" width="516" height="214"/>
+                                <rect key="frame" x="0.0" y="0.0" width="492" height="214"/>
                                 <view key="contentView" id="hbB-V1-Bf6">
-                                    <rect key="frame" x="1" y="1" width="514" height="212"/>
+                                    <rect key="frame" x="1" y="1" width="490" height="212"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <webView maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18">
-                                            <rect key="frame" x="0.0" y="-2" width="516" height="214"/>
+                                            <rect key="frame" x="0.0" y="-2" width="492" height="214"/>
                                             <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" minimumFontSize="7" plugInsEnabled="NO" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
                                                 <nil key="identifier"/>
                                             </webPreferences>
@@ -118,11 +118,11 @@
                                 </connections>
                             </box>
                             <textField verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="17">
-                                <rect key="frame" x="-2" y="220" width="122" height="14"/>
+                                <rect key="frame" x="-2" y="220" width="88" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="100" constant="100" id="gkn-FW-9aC"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Versionsinformation:" usesSingleLineMode="YES" id="170">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Julkaisutiedot:" usesSingleLineMode="YES" id="170">
                                     <font key="font" metaFont="smallSystemBold"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -145,12 +145,12 @@
                             <constraint firstItem="17" firstAttribute="leading" secondItem="fKC-QA-GZa" secondAttribute="leading" id="tFH-k0-O7I"/>
                         </constraints>
                     </customView>
-                    <button hidden="YES" horizontalHuggingPriority="150" verticalHuggingPriority="750" horizontalCompressionResistancePriority="997" translatesAutoresizingMaskIntoConstraints="NO" id="22">
-                        <rect key="frame" x="302" y="12" width="155" height="32"/>
+                    <button hidden="YES" horizontalHuggingPriority="150" verticalHuggingPriority="750" horizontalCompressionResistancePriority="997" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                        <rect key="frame" x="328" y="12" width="146" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="222" constant="90" id="2Zy-5G-GBj"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Påminn mig senare" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="171">
+                        <buttonCell key="cell" type="push" title="Remind Me Later" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="171">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
@@ -161,9 +161,9 @@ Gw
                             <action selector="remindMeLater:" target="-2" id="34"/>
                         </connections>
                     </button>
-                    <button hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="998" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                        <rect key="frame" x="103" y="12" width="199" height="32"/>
-                        <buttonCell key="cell" type="push" title="Hoppa över denna version" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="172">
+                    <button hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="998" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                        <rect key="frame" x="103" y="12" width="146" height="32"/>
+                        <buttonCell key="cell" type="push" title="Skip This Version" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="172">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -171,12 +171,12 @@ Gw
                             <action selector="skipThisVersion:" target="-2" id="33"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="20" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="76">
-                        <rect key="frame" x="457" y="12" width="173" height="32"/>
+                    <button horizontalHuggingPriority="20" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76">
+                        <rect key="frame" x="473" y="12" width="135" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="222" constant="120" id="N94-uf-6oP"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Installera uppdatering" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="173">
+                        <buttonCell key="cell" type="push" title="Asenna päivitys" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="173">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
@@ -188,12 +188,12 @@ DQ
                         </connections>
                     </button>
                     <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="117">
-                        <rect key="frame" x="106" y="49" width="519" height="20"/>
+                        <rect key="frame" x="106" y="49" width="495" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="28" id="0AI-ue-a0r"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="yM1-TA-HfP"/>
                         </constraints>
-                        <buttonCell key="cell" type="check" title="Hämta och installera nya uppdateringar automatiskt i framtiden." bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="175">
+                        <buttonCell key="cell" type="check" title="Automatically download and install updates in the future" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="175">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
