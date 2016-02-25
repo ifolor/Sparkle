@@ -135,16 +135,16 @@
 
         // MK>>>> Mangle the URL depending on the location/delivery country of the installation
         if (enclosureURLString) {
-            NSLog(@"Sparkle⚗: enclosure: %@", enclosure);
+            //NSLog(@"Sparkle⚗: enclosure: %@", enclosure);
             NSString *downloadHostMapping = [[NSUserDefaults standardUserDefaults] objectForKey:@"IfoUpdateDownloadURLMapping"];
             if (downloadHostMapping) {
-                NSLog(@"Sparkle⚗: IfoUpdateDownloadURLMapping: %@", downloadHostMapping);
+                //NSLog(@"Sparkle⚗: IfoUpdateDownloadURLMapping: %@", downloadHostMapping);
                 NSArray *parts = [downloadHostMapping componentsSeparatedByString:@"->"];
                 if (parts.count == 2) {
                     NSString *convertFrom = parts[0];
                     NSString *convertTo   = parts[1];
                     enclosureURLString = [enclosureURLString stringByReplacingOccurrencesOfString:convertFrom withString:convertTo];
-                    NSLog(@"Sparkle⚗: Download URL set to %@", enclosureURLString);
+                    //NSLog(@"Sparkle⚗: Download URL set to %@", enclosureURLString);
                 }
             }
         }
