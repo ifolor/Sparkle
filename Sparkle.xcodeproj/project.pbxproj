@@ -1375,6 +1375,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Sparkle Project";
 				TargetAttributes = {
+					55C14BB6136EEF1500649790 = {
+						DevelopmentTeam = ZKENARDFWN;
+					};
 					612279D80DB5470200AB99EA = {
 						TestTargetID = 8DC2EF4F0486A6940098B216;
 					};
@@ -2041,6 +2044,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D30D94A70100DD942E /* ConfigRelaunchDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = ZKENARDFWN;
 			};
 			name = Coverage;
 		};
@@ -2094,6 +2099,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D30D94A70100DD942E /* ConfigRelaunchDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = ZKENARDFWN;
 			};
 			name = Debug;
 		};
@@ -2101,6 +2108,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D40D94A70100DD942E /* ConfigRelaunchRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = ZKENARDFWN;
 			};
 			name = Release;
 		};
